@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Kimberly Rodríguez</title>
+    <style>
+        /* Variables de color basadas en la referencia y tu diseño */
+        :root {
+            --bg-body: #0b1120; /* Fondo principal muy oscuro */
+            --bg-card: #141b2d; /* Fondo del contenedor */
+            --bg-card-hover: #1e293b;
+            --text-main: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #38bdf8;
+            --badge-bg: #1e293b;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal estilo tarjeta grande */
+        .portfolio-container {
+            background-color: var(--bg-card);
+            max-width: 800px;
+            width: 100%;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            border: 1px solid #1e293b;
+        }
+
+        /* Sección Header / Hero */
+        .hero {
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-links a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.3s ease;
+        }
+
+        .hero-links a:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+
+        /* Títulos de sección */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Sección Habilidades */
+        .skills-section {
+            margin-bottom: 3rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-badge {
+            background-color: var(--badge-bg);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background-color: var(--border-color);
+            color: var(--text-main);
+        }
+
+        /* Sección Proyectos */
+        .projects-section {
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background-color: var(--bg-body);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsividad para móviles */
+        @media (max-width: 600px) {
+            .portfolio-container {
+                padding: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        
+        <!-- Sección Principal (Hero) -->
+        <header class="hero">
+            <h1>Hola, soy Kimberly Rodríguez</h1>
+            <h2>Desarrolladora de Software / Python & SQL</h2>
+            <p>Apasionada por crear soluciones lógicas, automatizar procesos y construir herramientas eficientes para negocios.</p>
+            <div class="hero-links">
+                <a href="https://www.linkedin.com/in/kimberlyrdg/" target="_blank">Contáctame</a>
+                <a href="https://github.com/Kimberlyrodriguez15" target="_blank">Mi GitHub</a> 
+            </div>
+        </header>
+
+        <!-- Sección de Habilidades -->
+        <section class="skills-section">
+            <h2 class="section-title">Mis Habilidades</h2>
+            <div class="skills-grid">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">Tkinter / GUI</span>
+                <span class="skill-badge">HTML5 & CSS3</span>
+                <span class="skill-badge">Git & GitHub</span>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section class="projects-section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            
+            <div class="project-card">
+                <h3>Sistema Comercial para Restaurantes</h3>
+                <p>Aplicación de escritorio en Python para automatizar pedidos, calcular IVA/comisiones de forma dinámica y registrar transacciones en una base de datos SQL.</p>
+                <a href="https://github.com/Kimberlyrodriguez15/sistema-gestion-restaurante" target="_blank"class="project-link">Ver Código en GitHub &rarr;</a> 
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Kimberly. Hecho con código propio.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
